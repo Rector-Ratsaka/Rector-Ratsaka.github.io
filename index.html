@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="ToDo.js" async></script><script src="mode.js" async></script>
+</head>
+<body>
+    <button onclick="toggleDarkLightMode('light')" id="lightM" >💡Light mode</button>
+    <button onclick="toggleDarkLightMode('dark')" id="darkM" >🌙Dark mode</button>
+    <header>
+        <h1>To Do</h1>
+        <p id="slogan">Your Day, Your Tasks, Your Success.</p>
+        <p id="date"></p>
+    </header>
+    <main>
+        <h3 id="list-title">My Tasks:</h3>
+        <ul id="myTasks"></ul>
+        <p id="no-tasks-message">No tasks yet.</p>
+        <p id="instruction-message">Add a new task below.</p>
+        <form id="new-task-form">
+            <label for="new-task-input"></label><input type="text" id="new-task-input" placeholder="Try typing 'Complete Sample project by tuesday 2am'">
+            <input type="submit" id="new-task-submit" value="Add task">
+        </form>
+    </main>
+</body>
+</html>

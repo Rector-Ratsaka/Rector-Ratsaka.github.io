@@ -1,0 +1,50 @@
+
+button{
+    width:130px;
+    height:20px;
+
+}
+.light-mode {
+    background-color: white;
+    color: black;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.blue-button {
+    background-color: blue;
+}
+#slogan,#date,h1{font-style: italic;color:purple;display: flex;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+form#search-form,
+form#new-task-form {
+    display: flex;
+}
+
+#new-task-input {
+    display:flex;
+    width: 400px;
+}
+form#new-task-form input[type="submit"] {
+    display:flex;
+    background-color: violet;
+}
+
+.show-message {
+    display: block;
+    color:grey;
+    padding-left: 40px;
+    font-style:italic;
+}
+
+
+
+
