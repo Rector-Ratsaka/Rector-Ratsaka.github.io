@@ -1,9 +1,5 @@
 
-button{
-    width:130px;
-    height:20px;
 
-}
 .light-mode {
     background-color: white;
     color: black;
@@ -15,14 +11,12 @@ button{
 .blue-button {
     background-color: blue;
 }
-#slogan,#date,h1{font-style: italic;color:purple;display: flex;}
 
-body {
+#slogan,#date,h1{
+    font-style: italic;
+    color:purple;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
-
 
 form#search-form,
 form#new-task-form {
@@ -33,6 +27,7 @@ form#new-task-form {
     display:flex;
     width: 400px;
 }
+
 form#new-task-form input[type="submit"] {
     display:flex;
     background-color: violet;

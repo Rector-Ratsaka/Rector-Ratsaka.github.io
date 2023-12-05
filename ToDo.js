@@ -10,12 +10,15 @@ document.getElementById("date").innerHTML = formattedDate;
 // Call the function initially to set the initial visibility
 updateTaskListVisibility();
 function updateTaskListVisibility() {
-    if (myTasksList.children.length == 0) {
+    if (myTasksList.children.length === 0) {
         noTasksMessage.classList.add('show-message');
         instructionMessage.classList.add('show-message');
+        document.getElementById("deleteB").disabled = true;
     } else {
-        noTasksMessage.classList.remove('show-message');
-        instructionMessage.classList.remove('show-message');
+        noTasksMessage.innerHTML= "";
+        instructionMessage.innerHTML = "";
+        document.getElementById("deleteB").disabled = false;
+
     }
 }
 
@@ -30,9 +33,10 @@ function addTask(taskText) {
         // Clear the input field (if needed)
         const newTaskInput = document.getElementById("new-task-input");
         newTaskInput.value = "";
-
-        // Save the updated task list to local storage
+       // Save the updated task list to local storage
         saveTasksToLocalStorage();
+    }else{
+        alert("Task cannot be empty.Add a new task below.");
     }
 }
 
@@ -64,6 +68,17 @@ function setInitialTasks() {
     }
 }
 setInitialTasks();
+
+function deleteAllTasks() {
+    const taskItems = document.querySelectorAll("#myTasks li");
+    for (let i = 0; i < taskItems.length; i++) {
+        taskItems[i].remove();
+    }
+    // Update the visibility of messages
+    updateTaskListVisibility();
+    // Save the updated task list to local storage
+    saveTasksToLocalStorage();
+}
 
 
 
